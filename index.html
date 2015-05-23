@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Dashboard ZF2</title>
+
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+        <link href="css/dashboard.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 box-avatar">
+                        <img src="images/users-avatar/ennio-simoes.jpg" alt="Ennio Simões" title="Ennio Simões" />
+                        <h3>Ennio Simões</h3>
+                    </div>
+                    <div class="col-md-9 header-options">
+                        <div class="col-md-1">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Usuários">
+                                <span class="fa fa-smile-o" aria-hidden="true"><span class="badge">13</span></span> 
+                            </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Mensagens">
+                                <span class="fa fa-comment-o" aria-hidden="true"><span class="badge">1</span></span>
+                            </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Notificações">
+                                <span class="fa fa-bell-o" aria-hidden="true"><span class="badge">3</span></span>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">
+                                <img class="logo-admin" src="images/logo-dashboard.png" alt="ZF2 CMS" title="ZF2 CMS" />
+                            </a>
+                        </div>
+                        <div class="col-md-1 col-md-offset-3">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Publicar novo">
+                                <span class="fa fa-pencil-square-o" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <div class="col-md-1">
+                            <a href="#" data-toggle="tooltip" data-placement="top" title="Sair">
+                                <span class="fa fa-sign-out" aria-hidden="true"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 menu-left">
+                    <ul>
+                        <li class="ativo"><a href="#/dashboard"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> <span>Dashboard</span></a></li>
+                        <li><a href="#/clientes"><span class="fa fa-child" aria-hidden="true"></span> <span>Clientes</span></a></li>
+                        <li><a href="#/menus"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> <span>Menus</span></a></li>
+                        <li><a href="#/paginas"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> <span>Paginas</span></a></li>
+                        <li><a href="#/blog"><span class="glyphicon glyphicon-tags" aria-hidden="true"></span> <span>Blog</span></a></li>
+                        <li><a href="#/redes-sociais"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <span>Redes Sociais</span></a></li>
+                        <li><a href="#/config"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <span>Configurações</span></a></li>
+                        <li><a href="#/cafe"><span class="fa fa-coffee" aria-hidden="true"></span> <span>Fazer Café</span></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <div ng-view></div>
+                </div>
+            </div>   
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+        <script>
+//        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
+        var randomScalingFactor = function(){ return 100};
+        var doughnutData = [
+                        {
+                                value: 300,
+                                color:"#F7464A",
+                                highlight: "#FF5A5E",
+                                label: "Limpeza Facial"
+                        },
+                        {
+                                value: 50,
+                                color: "#46BFBD",
+                                highlight: "#5AD3D1",
+                                label: "Lipo Sem Cortes"
+                        },
+                        {
+                                value: 100,
+                                color: "#FDB45C",
+                                highlight: "#FFC870",
+                                label: "Drenagem Modeladora"
+                        },
+                        {
+                                value: 40,
+                                color: "#949FB1",
+                                highlight: "#A8B3C5",
+                                label: "Corrente Russa"
+                        },
+                        {
+                                value: 120,
+                                color: "#4D5360",
+                                highlight: "#616774",
+                                label: "Lipoescultura"
+                        }
+                ];
+        var barChartData = {
+                labels : ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","ago","set","out","nov","dez"],
+                datasets : [
+                        {
+                                fillColor : "rgba(220,220,220,0.5)",
+                                strokeColor : "rgba(220,220,220,0.8)",
+                                highlightFill: "rgba(220,220,220,0.75)",
+                                highlightStroke: "rgba(220,220,220,1)",
+                                data : [200,100,120,300]
+                        },
+                        {
+                                fillColor : "rgba(151,187,205,0.5)",
+                                strokeColor : "rgba(151,187,205,0.8)",
+                                highlightFill : "rgba(151,187,205,0.75)",
+                                highlightStroke : "rgba(151,187,205,1)",
+                                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+                        }
+                ]
+        }
+        window.onload = function(){
+                var ctx = document.getElementById("canvas").getContext("2d");
+                window.myBar = new Chart(ctx).Bar(barChartData, {
+                        responsive : true
+                });
+                var ctx = document.getElementById("chart-area").getContext("2d");
+                window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
+        }
+        </script>                
+        <script src="js/dashboard.js"></script>
+
+        <script src="js/angular/angular.min.js"></script>
+        <script src="js/angular/angular-route.min.js"></script>
+        <script src="js/angular/angular-resource.min.js"></script>
+        <script src="js/angular/app.js"></script>
+        <script src="js/angular/controllers.js"></script>
+        <script src="js/angular/services.js"></script>        
+    </body>
+</html>

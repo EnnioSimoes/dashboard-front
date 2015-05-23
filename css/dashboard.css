@@ -1,0 +1,191 @@
+/*==============
+DEFAULT
+================*/
+h1,h2,h3,h4,h5,h6,p,span,a{font-family: 'Ubuntu', sans-serif;}
+.clear{clear: both;}
+.border{border: 1px solid #000;}
+body{background: url(../images/bk-admin.jpg) repeat-x #b4c7d8}
+hr{
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.74902), rgba(0, 0, 0, 0));
+    border-top-style: none;
+    height: 1px;
+    line-height: normal;
+    margin: 20px auto;
+    padding: 0px;
+    width: 100%;
+}
+
+/*==============
+HEADER DASHBOARD
+================*/
+
+header{
+    margin-top: 30px;
+}
+header .glyphicon, header .fa{
+    color: #9cabac;
+    margin: 34px 0 0 0;
+    font-size: 22px;
+}
+header .badge{
+    background: #e74c3c;
+    font-size: 9px;
+}
+.box-avatar{
+    background: #2ecc71;
+    min-height: 90px; 
+}
+.header-options{
+    background: #fff;
+    min-height: 90px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.box-avatar img{
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 100%;
+    margin: 20px 0 0 10px;
+    float: left;
+}
+.box-avatar h3{
+    color: #fff;
+    margin: 37px 0 0 15px;
+    float: left;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+img.logo-admin{
+    max-width: 240px;
+    max-height: 70px;
+    margin-top: 12px;
+}
+
+/*==============
+MENU PRINCIPAL
+================*/
+.menu-left{
+    background: #34495e;
+    padding: 0;
+}
+.menu-left ul{
+    padding: 0;
+}
+.menu-left ul li{
+    list-style: none;
+    padding: 15px 0;
+}
+.menu-left ul li a{
+    text-decoration: none;
+}
+.menu-left ul li a span{
+    color: #95a5a6;
+    text-transform: uppercase;
+    font-size: 15px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+.menu-left ul li a .glyphicon, .menu-left ul li a .fa{
+    font-size: 22px;
+    padding: 0 10px 0 15px;
+}
+.menu-left ul li:hover{
+    background: #243342;
+}
+.menu-left ul li:hover span{
+    color: #fff;
+}
+.menu-left ul li:hover a .glyphicon, .menu-left ul li:hover a .fa{
+    color: #2ecc71;
+}
+.menu-left ul li.ativo{
+    background: #243342;
+}
+.menu-left ul li.ativo span{
+    color: #fff;
+}
+.menu-left ul li.ativo a .glyphicon, .menu-left ul li.ativo a .fa{
+    color: #2ecc71;
+}
+
+/*==============
+MENU CONTENT
+================*/
+
+.menu-content{
+    background: #fff;
+    min-height: 52px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.menu-content ul{
+    margin: 0;
+}
+.menu-content ul li{
+    display: inline-block;
+    padding: 20px 5px 5px 5px;
+    margin: 0;
+}
+.menu-content ul li:hover, .menu-content ul li.ativo{
+    border-bottom: 5px solid #27ae60;
+}
+.menu-content ul li a{
+    color: #2c3e50;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.menu-content .input-group{
+    padding-top: 8px;
+}
+.menu-content select{
+    margin-top: 8px;
+}
+/*==============
+CONTENT
+================*/
+.content-admin{
+    background: #ecf0f1;
+    min-height: 270px;
+    margin-bottom: 100px;   
+    padding-top: 15px;
+}
+.dashboard .panel-icon{
+    float: left;
+    width: 50%;
+    height: 130px;
+}
+.dashboard .panel-icon span.fa{
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 130px;
+}
+.dashboard .numeros{
+    background: #fff;
+    float: left;
+    width: 50%;
+    height: 130px;
+    color: #767676;  
+    box-shadow: 1px 1px 2px #767676;
+}
+.dashboard .numeros p{
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;    
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.dashboard .numeros p span{
+    font-size: 30px;
+}
+.color-inscritos{
+    background: #A3C86D;
+    color: #82B33A;
+}
+.color-facebook{
+    background: #6784db;
+    color: #45569C;
+}
+.color-twitter{
+    background: #90cff9;
+    color: #5EA9DD;
+}

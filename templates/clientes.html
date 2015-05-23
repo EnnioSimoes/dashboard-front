@@ -1,0 +1,96 @@
+<div ng-init="load()">
+    <div class="row"><!-- Links Painel  -->
+        <div class="col-md-12 menu-content">
+            <div class="col-md-6">
+                <ul>
+                    <li class="ativo"><a href="#">Estatisticas</a></li>
+                    <li><a href="#">Mensagens</a></li>
+                    <li><a href="#">Social</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2">
+                  <span class="input-group-addon" id="basic-addon2"><span class="fa fa-search"></span></span>
+                </div>                
+            </div>
+        </div>
+    </div><!-- FIM Links Painel  -->
+    <div class="row"><!-- Conteudo painel  -->
+        <div class="col-md-12 content-admin">
+            <table class="table">
+                <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Cidade</th>
+                <th>EDITAR</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Alex Miranda</td>
+                        <td>23</td>
+                        <td>Tangamandapio</td>
+                        <td>
+                            <a href="#/produtos/editar/" class="btn btn-primary btn-xs">Editar</a>
+                            <a href="#" class="btn btn-danger btn-xs">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Leonardo Coitim</td>
+                        <td>24</td>
+                        <td>Bagulhos</td>
+                        <td>
+                            <a href="#/produtos/editar/" class="btn btn-primary btn-xs">Editar</a>
+                            <a href="#" class="btn btn-danger btn-xs">Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>William Oliveira</td>
+                        <td>27</td>
+                        <td>Bagulhos</td>
+                        <td>
+                            <a href="#/produtos/editar/" class="btn btn-primary btn-xs">Editar</a>
+                            <a href="#" class="btn btn-danger btn-xs">Excluir</a>
+                        </td>
+                    </tr>
+
+                    <!--
+                    <tr ng-repeat="registro in registros">
+                        <td>{{registro.id}}</td>
+                        <td>{{registro.nome}}</td>
+                        <td>{{registro.descricao}}</td>
+                        <td>{{registro.categoria.nome}}</td>
+                        <td>
+                            <a href="#/produtos/editar/{{registro.id}}" class="btn btn-primary btn-xs">Editar</a>
+                            <a href="#" ng-click="delete(registro.id)" class="btn btn-danger btn-xs">Excluir</a>
+                        </td>
+                    </tr>
+                    -->
+                </tbody>
+            </table>               
+            <nav>
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div><!-- FIM Conteudo painel  -->
+</div>
