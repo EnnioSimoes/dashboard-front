@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col-md-3 menu-left">
                     <ul>
-                        <li class="ativo"><a href="#/dashboard"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> <span>Dashboard</span></a></li>
+                        <li id="menudDshboard" class="ativo"><a href="#/dashboard"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span> <span>Dashboard</span></a></li>
                         <li><a href="#/clientes"><span class="fa fa-child" aria-hidden="true"></span> <span>Clientes</span></a></li>
                         <li><a href="#/menus"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> <span>Menus</span></a></li>
                         <li><a href="#/paginas"><span class="glyphicon glyphicon-file" aria-hidden="true"></span> <span>Paginas</span></a></li>
@@ -82,82 +82,32 @@
                 <div class="col-md-9">
                     <div ng-view></div>
                 </div>
-            </div>   
+            </div>  
+               
+        </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-        <script>
-//        var randomScalingFactor = function(){ return Math.round(Math.random()*100)};
-        var randomScalingFactor = function(){ return 100};
-        var doughnutData = [
-                        {
-                                value: 300,
-                                color:"#F7464A",
-                                highlight: "#FF5A5E",
-                                label: "Limpeza Facial"
-                        },
-                        {
-                                value: 50,
-                                color: "#46BFBD",
-                                highlight: "#5AD3D1",
-                                label: "Lipo Sem Cortes"
-                        },
-                        {
-                                value: 100,
-                                color: "#FDB45C",
-                                highlight: "#FFC870",
-                                label: "Drenagem Modeladora"
-                        },
-                        {
-                                value: 40,
-                                color: "#949FB1",
-                                highlight: "#A8B3C5",
-                                label: "Corrente Russa"
-                        },
-                        {
-                                value: 120,
-                                color: "#4D5360",
-                                highlight: "#616774",
-                                label: "Lipoescultura"
-                        }
-                ];
-        var barChartData = {
-                labels : ["Jan","Fev","Mar","Abr","Mai","Jun","Jul","ago","set","out","nov","dez"],
-                datasets : [
-                        {
-                                fillColor : "rgba(220,220,220,0.5)",
-                                strokeColor : "rgba(220,220,220,0.8)",
-                                highlightFill: "rgba(220,220,220,0.75)",
-                                highlightStroke: "rgba(220,220,220,1)",
-                                data : [200,100,120,300]
-                        },
-                        {
-                                fillColor : "rgba(151,187,205,0.5)",
-                                strokeColor : "rgba(151,187,205,0.8)",
-                                highlightFill : "rgba(151,187,205,0.75)",
-                                highlightStroke : "rgba(151,187,205,1)",
-                                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
-                        }
-                ]
-        }
-        window.onload = function(){
-                var ctx = document.getElementById("canvas").getContext("2d");
-                window.myBar = new Chart(ctx).Bar(barChartData, {
-                        responsive : true
-                });
-                var ctx = document.getElementById("chart-area").getContext("2d");
-                window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {responsive : true});
-        }
-        </script>                
-        <script src="js/dashboard.js"></script>
 
+        <script src="js/countUp.min.js"></script>
+        
+        
+        <script src="js/dashboard.js"></script>
+        
         <script src="js/angular/angular.min.js"></script>
         <script src="js/angular/angular-route.min.js"></script>
         <script src="js/angular/angular-resource.min.js"></script>
         <script src="js/angular/app.js"></script>
         <script src="js/angular/controllers.js"></script>
         <script src="js/angular/services.js"></script>        
-    </body>
+        <script>
+            $('.glyphicon-chevron-up').click(function(){
+                //var item = $(this).parent('.link-menu-admin');
+                //var item = 'teste';
+                alert('teste');
+            });            
+        </script>     
+        </body>    
 </html>

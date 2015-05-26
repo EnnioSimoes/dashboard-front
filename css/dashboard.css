@@ -189,3 +189,31 @@ CONTENT
     background: #90cff9;
     color: #5EA9DD;
 }
+
+/*==============
+link-menu-admin
+================*/
+.link-menu-admin{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    margin: 3px;
+}
+
+.link-menu-admin p{
+    line-height: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+.link-menu-admin span{
+    float: right;
+    cursor: pointer;
+    clear: both;
+    line-height: 17px;
+}
+
+.link-menu-admin span.glyphicon-plus{
+    line-height: 35px;
+}
