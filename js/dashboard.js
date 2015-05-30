@@ -15,7 +15,7 @@ $('.glyphicon-plus').click(function(){
 /* 
  * CountUp
  */
-window.onload = function() {
+function efeito() {
     
     var contInscritos = $("#contInscritos").html();
     var inscritos = new CountUp("contInscritos", 0, contInscritos);
@@ -28,14 +28,19 @@ window.onload = function() {
     
     //setInterval(function(){
        inscritos.start(); 
-       inscritos.start(); 
+       curtidas.start(); 
        seguidores.start(); 
     //}, 3000);
-    
- 
+
 };
 
+function alertMenu(){
+  // var item = $(".glyphicon");
+  alert("Esta fun é apenas um teste");
+};
 
-
-
-
+function init() {
+  alertMenu();
+  efeito();
+}
+window.addEventListener("load", init, false);
