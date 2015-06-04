@@ -9,7 +9,7 @@ $(function () {
 $('.glyphicon-plus').click(function(){
     //var item = $(this).parent('.link-menu-admin');
     //var item = 'teste';
-    alert('teste');
+    //alert('teste');
 });
 
 /* 
@@ -40,7 +40,6 @@ function alertMenu(){
 };
 
 function init() {
-  alertMenu();
   efeito();
 }
 window.addEventListener("load", init, false);

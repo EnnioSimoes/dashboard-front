@@ -9,10 +9,18 @@
 
         <link href="css/font-awesome.min.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="http://jimliu.github.io/angular-ui-tree/dist/angular-ui-tree.min.css">        
+
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- WebFont -->
         <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+        <!-- Custom Style -->
         <link href="css/dashboard.css" rel="stylesheet">
+        
+        <!-- angular-ui-tree Usado para gerenciar os Menus -->
+        <link href="css/app.css" rel="stylesheet">
+        <link href="css/angular-ui-tree.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -83,31 +91,43 @@
                     <div ng-view></div>
                 </div>
             </div>  
-               
+
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
 
+        <!-- Contador animado -->
         <script src="js/countUp.min.js"></script>
-        
-        
+
+        <!-- Javascript Custom -->
         <script src="js/dashboard.js"></script>
-        
+        <!-- AngularJs v1.2.13 -->
         <script src="js/angular/angular.min.js"></script>
+
+        <!-- Scripts para gerenciar Menus -->
+        <script src="source/main.js"></script>
+        <script src="source/controllers/handleCtrl.js"></script>
+        <script src="source/controllers/nodeCtrl.js"></script>
+        <script src="source/controllers/nodesCtrl.js"></script>
+        <script src="source/controllers/treeCtrl.js"></script>
+        <script src="source/directives/uiTree.js"></script>
+        <script src="source/directives/uiTreeHandle.js"></script>
+        <script src="source/directives/uiTreeNode.js"></script>
+        <script src="source/directives/uiTreeNodes.js"></script>
+        <script src="source/services/helper.js"></script>
+
+        <!-- Modulo ngRoute v1.2.13 -->
         <script src="js/angular/angular-route.min.js"></script>
+        <!-- Modulo Resource  v1.2.13 -->
         <script src="js/angular/angular-resource.min.js"></script>
+        <!-- Aplicacao -->
         <script src="js/angular/app.js"></script>
+        <!-- Controllers -->
         <script src="js/angular/controllers.js"></script>
-        <script src="js/angular/services.js"></script>        
-        <script>
-            $('.glyphicon-chevron-up').click(function(){
-                //var item = $(this).parent('.link-menu-admin');
-                //var item = 'teste';
-                alert('teste');
-            });            
-        </script>     
-        </body>    
+        <!-- Servicos -->
+        <script src="js/angular/services.js"></script>           
+    </body>    
 </html>

@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('myApp', ['ngRoute','myApp.controllers'])
+angular.module('myApp', ['ngRoute','myApp.controllers', 'ui.tree'])
         .config(
             ['$routeProvider',
                 function($routeProvider){
@@ -13,15 +13,9 @@ angular.module('myApp', ['ngRoute','myApp.controllers'])
                                 templateUrl: 'templates/clientes.html'
                             })
                             .when('/menus/',{
-                                templateUrl: 'templates/menus.html'
+                                templateUrl: 'templates/menus.html',
+                                controller: 'BasicExampleCtrl'
                             })
-                            
-                            
-                            
-                            
-                            
-                            
-                            
                             .when('/cafe/',{
                                 templateUrl: 'templates/cafe.html'
                             })
